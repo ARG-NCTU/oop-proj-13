@@ -1,7 +1,8 @@
 import pygame
 from math import sin
+from abc import ABC
 
-class Entity(pygame.sprite.Sprite):
+class Entity(pygame.sprite.Sprite, ABC):
 
     def __init__(self,groups):
         super().__init__(groups)
@@ -43,3 +44,6 @@ class Entity(pygame.sprite.Sprite):
             return 255
         else:
             return 0
+
+    def animate(self):
+        pass
