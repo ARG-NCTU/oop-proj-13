@@ -3,8 +3,14 @@
 ## Description
 This is a adventure game, explore and kill enemy with your ability. Up down left right to control your position, q and e to change weapon and power, space to attack.
 
-This project was orignially developed by kayeedelau and teammates in 2023.
+This project was integrated and developed by kayeedelau and teammates in OOP course in 2023.
 It is used as teaching materials in the OOP and Advnaced OOP courses in NYCU.
+
+Part of the materials are based on:
+https://github.com/clear-code-projects/Zelda
+under the Creative Commons Zero (CC0) license.
+The art assets and the soundtrack have been done by Pixel-boy and AAA and can be found here: https://pixel-boy.itch.io/ninja-adventure-asset-pack They are also published under a CC0 license.
+
 
 <img src="./oop13.gif"/>
 
