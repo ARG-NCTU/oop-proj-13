@@ -1,7 +1,10 @@
-# oop-porj-13
+# oop-proj-13-advanture
 
 ## Description
 This is a adventure game, explore and kill enemy with your ability. Up down left right to control your position, q and e to change weapon and power, space to attack.
+
+This project was orignially developed by kayeedelau and teammates in 2023.
+It is used as teaching materials in the OOP and Advnaced OOP courses in NYCU.
 
 <img src="./oop13.gif"/>
 
