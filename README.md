@@ -15,7 +15,7 @@ $ git clone git@github.com:ARG-NCTU/oop-proj-13-advanture.git
 ```
 Run docker
 ```
-$ cd oop-proj-13
+$ cd oop-proj-13-advanture
 $ source docker_run.sh
 ```
 Start the game
@@ -26,8 +26,8 @@ $ python3 main.py
 ### Windows
 Install Anaconda from following site.
 https://docs.anaconda.com/free/anaconda/install/windows/
-#### Download oop-proj-13
-Download oop-proj-13 as a zip, and unzip.
+#### Download oop-proj-13-advanture
+Download oop-proj-13-advanture as a zip, and unzip.
 #### activate base env, and start the game
 You can change "oop_env" to what ever the name you like.
 ```
