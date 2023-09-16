@@ -31,12 +31,12 @@ docker run \
     -e QT_X11_NO_MITSHM=1 \
     -e XAUTHORITY=$XAUTH \
     -v "$XAUTH:$XAUTH" \
-    -v "/home/$USER/oop-proj-13:/home/arg/oop-proj-13" \
+    -v "/home/$USER/oop-proj-13-advanture:/home/arg/oop-proj-13-advanture" \
     -v "/tmp/.X11-unix:/tmp/.X11-unix" \
     -v "/etc/localtime:/etc/localtime:ro" \
     -v "/dev:/dev" \
     -v "/var/run/docker.sock:/var/run/docker.sock" \
-    -w "/home/arg/oop-proj-13" \
+    -w "/home/arg/oop-proj-13-advanture" \
     --user "root:root" \
     --network host \
     --privileged \
