@@ -1,7 +1,10 @@
-# oop-porj-13
+# oop-proj-13-advanture
 
 ## Description
 This is a adventure game, explore and kill enemy with your ability. Up down left right to control your position, q and e to change weapon and power, space to attack.
+
+This project was orignially developed by kayeedelau and teammates in 2023.
+It is used as teaching materials in the OOP and Advnaced OOP courses in NYCU.
 
 <img src="./oop13.gif"/>
 
@@ -15,7 +18,7 @@ $ git clone git@github.com:ARG-NCTU/oop-proj-13-advanture.git
 ```
 Run docker
 ```
-$ cd oop-proj-13
+$ cd oop-proj-13-advanture
 $ source docker_run.sh
 ```
 Start the game
@@ -26,8 +29,8 @@ $ python3 main.py
 ### Windows
 Install Anaconda from following site.
 https://docs.anaconda.com/free/anaconda/install/windows/
-#### Download oop-proj-13
-Download oop-proj-13 as a zip, and unzip.
+#### Download oop-proj-13-advanture
+Download oop-proj-13-advanture as a zip, and unzip.
 #### activate base env, and start the game
 You can change "oop_env" to what ever the name you like.
 ```
