@@ -7,6 +7,36 @@ from random     import randint
 
 class Player(Entity):
     def __init__(self,  pos,  groups,  obstacle_sprites, create_attack, destroy_attack, create_magic, player_data):
+        """
+        Player class
+        
+        Args:
+        pos (tuple): position of the player
+        groups (pygame.sprite.Group): sprite group
+        obstacle_sprites (pygame.sprite.Group): sprite group
+        create_attack (function): function to create an attack
+        destroy_attack (function): function to destroy an attack
+        create_magic (function): function to create a magic
+        player_data (list): player data
+
+        Attributes:
+        image (pygame.Surface): player image
+        rect (pygame.Rect): player rect
+        hitbox (pygame.Rect): player hitbox
+        player_data (list): player data
+        animations (dict): player animations
+        status (str): player status
+        attacking (bool): player attacking
+        attack_cooldown (int): player attack cooldown
+        attack_time (int): player attack time
+        obstacle_sprites (pygame.sprite.Group): sprite group
+        death_sound (pygame.mixer.Sound): death sound
+
+        Methods:
+        import_player_assets: import player assets from graphics folder
+        get_random_position: get a random position on the map
+
+        """
         super().__init__(groups)
         self.image      = pygame.image.load('./graphics/skin/2/down/down_0.png').convert_alpha()
         self.rect       = self.image.get_rect(topleft = pos)
@@ -59,6 +89,10 @@ class Player(Entity):
         self.weapon_attack_sound.set_volume(0.4)
 
     def import_player_assets(self):
+        """
+        Import player assets from graphics folder
+        """
+        
         character_path = f'./graphics/skin/{self.player_data[0][1]}/'
         self.animations = { 'up':[], 'down':[], 'left':[], 'right':[],
                            'up_idle':[], 'down_idle':[], 'left_idle':[], 'right_idle':[],
@@ -69,11 +103,17 @@ class Player(Entity):
             self.animations[animation] = import_folder(full_path)
 
     def get_random_position(self):
+        """
+        Get a random position on the map
+        """
         x = randint(64, WIDTH-128)
         y = randint(64, HEIGHT-128)
         return x, y
 
     def input(self):
+        """
+        Handle player input
+        """
         if not self.attacking:
             keys = pygame.key.get_pressed()
 
