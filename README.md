@@ -11,7 +11,7 @@ This is a adventure game, explore and kill enemy with your ability. Up down left
 git clone the game:
 ```
 $ cd ~
-$ git clone git@github.com:ARG-NCTU/oop-proj-13.git
+$ git clone git@github.com:ARG-NCTU/oop-proj-13-advanture.git
 ```
 Run docker
 ```
