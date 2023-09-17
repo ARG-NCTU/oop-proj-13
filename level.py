@@ -1,23 +1,23 @@
 import pygame
-from settings 	import *
-from tile 		import Tile
-from player 	import Player
-from debug 		import debug
-from support 	import *
-from random 	import choice, randint
-from weapon 	import Weapon
-from ui 		import UI
-from enemy 		import Enemy
-from particles 	import AnimationPlayer
-from magic 		import MagicPlayer
-from upgrade 	import Upgrade
+from settings import *
+from tile import Tile
+from player import Player
+from debug import debug
+from support import *
+from random import choice, randint
+from weapon import Weapon
+from ui import UI
+from enemy import Enemy
+from particles import AnimationPlayer
+from magic import MagicPlayer
+from upgrade import Upgrade
 
 class Level:
 	def __init__(self, file_name):
 
 		# get the display surface
 		self.display_surface= pygame.display.get_surface()
-		self.game_paused 	= False
+		self.game_paused = False
 
 		# setting
 		self.player_data = file_name
@@ -27,20 +27,20 @@ class Level:
 		self.obstacle_sprites= pygame.sprite.Group()
 		
 		#attack sprites
-		self.current_attack 	= None
-		self.attack_sprites 	= pygame.sprite.Group()
+		self.current_attack = None
+		self.attack_sprites = pygame.sprite.Group()
 		self.attackable_sprites = pygame.sprite.Group()
 		
 		#sprite setup
 		self.create_map()
 
 		#user interface
-		self.ui 	= UI()
-		self.upgrade= Upgrade(self.player)
+		self.ui = UI()
+		self.upgrade = Upgrade(self.player)
 		
 		#particles
-		self.animation_player	= AnimationPlayer()
-		self.magic_player 		= MagicPlayer(self.animation_player)
+		self.animation_player = AnimationPlayer()
+		self.magic_player = MagicPlayer(self.animation_player)
 
 	def create_attack(self):
 	
@@ -62,14 +62,14 @@ class Level:
 	def create_map(self):
 		layouts = {
 			'boundary': import_csv_layout('./cool/01_Block.csv'), 
-			'01': 		import_csv_layout('./cool/01_配件.csv'), 
-			'02': 		import_csv_layout('./cool/01_物件.csv'), 
-			'entity': 	import_csv_layout('./cool/01_enemy.csv'), 
-			'player': 	import_csv_layout('./cool/01_Player.csv')}
+			'01': import_csv_layout('./cool/01_配件.csv'), 
+			'02': import_csv_layout('./cool/01_物件.csv'), 
+			'entity': import_csv_layout('./cool/01_enemy.csv'), 
+			'player': import_csv_layout('./cool/01_Player.csv')}
 		
 		graphics = {
-			'01':import_folder('./graphics/pic'), 
-			'ob':import_folder('./graphics/pic')}
+			'01': import_folder('./graphics/pic'), 
+			'ob': import_folder('./graphics/pic')}
 			
 		for style, layout in layouts.items():
 			for row_index, row in enumerate(layout):

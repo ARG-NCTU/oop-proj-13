@@ -60,16 +60,16 @@ class Game:
 		game_paused = False
 		menu_state= 'main'
 		
-		menu 		= pygame.image.load('./graphics/menu.png')
-		menu 		= pygame.transform.scale(menu,(400,125))
-		background 	= pygame.image.load('./cool/floor.png')
-		font 		= pygame.font.SysFont('Arial',50)
-		title 		= pygame.transform.scale(pygame.image.load('./graphics/Dream Adventure.png'),(720,240))
-		text1		= font.render('Set your ID:',True,(255,255,255))
-		text2		= font.render('Input your ID:',True,(255,255,255))
+		menu = pygame.image.load('./graphics/menu.png')
+		menu = pygame.transform.scale(menu,(400,125))
+		background = pygame.image.load('./cool/floor.png')
+		font = pygame.font.SysFont('Arial',50)
+		title = pygame.transform.scale(pygame.image.load('./graphics/Dream Adventure.png'),(720,240))
+		text1 = font.render('Set your ID:',True,(255,255,255))
+		text2 = font.render('Input your ID:',True,(255,255,255))
 		text1_rect 	= text1.get_rect(center=(400,400))
-		text3		= font.render('Choose your character:',True,(255,255,255))
-		text4		= font.render('Press Space to Confirm',True,(150,150,150))
+		text3 = font.render('Choose your character:',True,(255,255,255))
+		text4 = font.render('Press Space to Confirm',True,(150,150,150))
 		
 		# pause control
 		self.is_time_stopped = False
@@ -78,21 +78,21 @@ class Game:
 		sfx = pygame.mixer.Sound('./audio/click.mp3')
 		
 		# image loading
-		start_img   = pygame.image.load('./graphics/start.png').convert_alpha()
-		load_img	= pygame.image.load('./graphics/load.png').convert_alpha()
-		quit_img	= pygame.image.load('./graphics/quit.png').convert_alpha()
-		start_img   = pygame.transform.scale(start_img,(400,125))
-		load_img    = pygame.transform.scale(load_img ,(400,125))
-		quit_img    = pygame.transform.scale(quit_img ,(400,125))
+		start_img = pygame.image.load('./graphics/start.png').convert_alpha()
+		load_img = pygame.image.load('./graphics/load.png').convert_alpha()
+		quit_img = pygame.image.load('./graphics/quit.png').convert_alpha()
+		start_img = pygame.transform.scale(start_img,(400,125))
+		load_img = pygame.transform.scale(load_img ,(400,125))
+		quit_img = pygame.transform.scale(quit_img ,(400,125))
 		
 		#create button instances
-		start_button= button.Button(WIDTH//2, HEIGHT//7*3  , start_img, 1)
+		start_button = button.Button(WIDTH//2, HEIGHT//7*3  , start_img, 1)
 		load_button	= button.Button(WIDTH//2, HEIGHT//7*4.5, load_img, 1)
 		quit_button	= button.Button(WIDTH//2, HEIGHT//7*6  , quit_img, 1)
 
-		number 		= ""
-		font1 		= pygame.font.Font(None, 70)
-		input_rect 	= pygame.Rect(WIDTH//2-50, HEIGHT//2-20, 200, 48)
+		number = ""
+		font1 = pygame.font.Font(None, 70)
+		input_rect = pygame.Rect(WIDTH//2-50, HEIGHT//2-20, 200, 48)
 		
 		while game:
 			while lobby:
@@ -226,22 +226,22 @@ class Game:
 				pygame.display.update()			
 				self.clock.tick(FPS)
 			# image loading
-			resume_img  = pygame.image.load('./graphics/resume.png').convert_alpha()
-			quit_img	= pygame.image.load('./graphics/quit.png').convert_alpha()
-			audio_img   = pygame.image.load('./graphics/audio.png').convert_alpha()
-			audio_gray  = pygame.image.load('./graphics/audio_gray.png').convert_alpha()
+			resume_img = pygame.image.load('./graphics/resume.png').convert_alpha()
+			quit_img = pygame.image.load('./graphics/quit.png').convert_alpha()
+			audio_img = pygame.image.load('./graphics/audio.png').convert_alpha()
+			audio_gray = pygame.image.load('./graphics/audio_gray.png').convert_alpha()
 			
 			# image transform
-			resume_img   = pygame.transform.scale(resume_img,(400,125))
-			quit_img     = pygame.transform.scale(quit_img  ,(400,125))
-			audio_img    = pygame.transform.scale(audio_img ,(400,125))
-			audio_gray   = pygame.transform.scale(audio_gray,(400,125))
+			resume_img = pygame.transform.scale(resume_img,(400,125))
+			quit_img = pygame.transform.scale(quit_img  ,(400,125))
+			audio_img = pygame.transform.scale(audio_img ,(400,125))
+			audio_gray = pygame.transform.scale(audio_gray,(400,125))
 			
 			#create button instances
-			resume_button= button.Button(WIDTH//2, HEIGHT//7*3  , resume_img, 1)
-			quit_button	 = button.Button(WIDTH//2, HEIGHT//7*6  , quit_img, 1)
+			resume_button = button.Button(WIDTH//2, HEIGHT//7*3  , resume_img, 1)
+			quit_button	= button.Button(WIDTH//2, HEIGHT//7*6  , quit_img, 1)
 			audio_normal = button.Button(WIDTH//2, HEIGHT//7*4.5, audio_img, 1)
-			audio_gray	 = button.Button(WIDTH//2, HEIGHT//7*4.5, audio_gray, 1)
+			audio_gray = button.Button(WIDTH//2, HEIGHT//7*4.5, audio_gray, 1)
 			
 			# audio control
 			self.is_mute = False
