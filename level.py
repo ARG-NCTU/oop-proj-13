@@ -62,8 +62,8 @@ class Level:
     def create_map(self):
         layouts = {
             'boundary': import_csv_layout('./cool/01_Block.csv'), 
-            '01':       import_csv_layout('./cool/01_配件.csv'), 
-            '02':       import_csv_layout('./cool/01_物件.csv'), 
+            '01':       import_csv_layout('./cool/01_Accessories.csv'), 
+            '02':       import_csv_layout('./cool/01_Object.csv'), 
             'entity':   import_csv_layout('./cool/01_enemy.csv'), 
             'player':   import_csv_layout('./cool/01_Player.csv')}
 
